@@ -85,19 +85,3 @@ Images
 2. Make your changes on a feature branch.
 3. Run the dev server and type-check locally.
 4. Open a Pull Request with a clear description and any source attributions for added images/content.
-
-## Common issues and troubleshooting
-- Peer dependency errors during `npm install` (for example due to `vaul` requiring older React): you can use `npm install --legacy-peer-deps` to install quickly, but the long-term solution is to align React version and replace incompatible packages.
-- Port in use: Next will auto-choose a different port. Use `PORT=3001 npm run dev` to force a port.
-- If you see TypeScript errors referencing `.next/types`, delete `.next` and restart the dev server; `.next` contains generated types that can be transient.
-
-## Tests and CI
-This repository does not currently include automated tests. For PRs that change behavior, please ensure manual verification locally and run `npx tsc --noEmit` before opening a PR. If you want, we can add unit tests and a CI configuration in a follow-up.
-
-## License and attribution
-Include attribution in PR descriptions for any images or content you add that you do not own. Do not commit content that violates copyright.
-
-## Contact
-Open an issue if you need help or want to propose structural changes. For editorial questions include references or suggested sources.
-
-Thank you for contributing to Bharat Cultures.
