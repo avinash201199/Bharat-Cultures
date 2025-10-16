@@ -293,7 +293,7 @@ const ALL: StateData[] = [
   },
 
   // Brief entries for all remaining States & Union Territories
-  {
+  /*{
     slug: "andhra-pradesh",
     name: "Andhra Pradesh",
     tagline: "Kuchipudi, temple towns, and coastal flavors",
@@ -324,7 +324,68 @@ const ALL: StateData[] = [
       { src: placeholder("Kuchipudi dancer pose", 800, 450), alt: "Kuchipudi" },
     ],
     related: ["telangana", "tamil-nadu", "karnataka", "odisha"],
-  },
+  },*/
+  {
+  slug: "andhra-pradesh",
+  name: "Andhra Pradesh",
+  tagline: "Kuchipudi, temple towns, coastal flavors, sun-kissed beaches, and vibrant stories",
+  heroImage: "/images/andhra-pradesh/home.jpeg",
+  about: "Andhra Pradesh is a land of contrasts and culture: from the sacred Tirupati hills to sunlit beaches, from the rhythmic beats of Kuchipudi to the aromatic spices of coastal cuisine, the state embodies a rich tapestry of art, devotion, and natural beauty.",
+  cultureAspects: [
+    {
+      id: "dance",
+      title: "Music & Dance",
+      description: "Kuchipudi’s expressive abhinaya, graceful movements, and intricate footwork flourish both on stage and in villages, capturing Andhra’s artistic spirit.",
+      image: "/images/andhra-pradesh/kuchipudi.jpeg",
+      content: "Kuchipudi, a classical dance form originating in the village of Kuchipudi, blends drama, devotion, and rhythm. Performers convey stories from epics like the Ramayana and Mahabharata through precise gestures, facial expressions, and vibrant costumes. Village performances often accompany temple festivals, while grand stages bring this ancient art to global audiences. Music, dance, and theatrical storytelling intertwine to preserve centuries-old traditions, making every performance a living heritage."
+    },
+    {
+      id: "temples",
+      title: "Temples",
+      description: "Tirumala-Tirupati and other temple towns are centers of devotion, culture, and community bonding.",
+      image: "/images/andhra-pradesh/tirupati.jpeg",
+      content: "Tirupati’s Venkateswara Temple, perched on the sacred Tirumala Hills, attracts millions of pilgrims every year. Devotees participate in darshan, seva, and annual festivals such as Brahmotsavam, creating a rhythm of faith that shapes local life. Other temple towns like Srikalahasti, Vijayawada’s Kanaka Durga, and Simhachalam showcase a rich blend of architecture, mythology, and religious rituals, illustrating Andhra Pradesh’s deeply rooted spiritual traditions."
+    },
+    {
+      id: "cuisine",
+      title: "Cuisine",
+      description: "Andhra cuisine is famed for its coastal seafood, tangy Gongura, fiery pickles, and wholesome curries that awaken the senses.",
+      image: "/images/andhra-pradesh/coastal-food.jpeg",
+      content: "From the spicy prawn and fish curries along the Godavari and Krishna deltas to the tangy Gongura pachadi, Andhra cuisine celebrates the bounty of the coast. Meals include aromatic rice, lentils, fresh vegetables, and vibrant condiments, each reflecting regional diversity. Coastal towns bring in freshly caught seafood daily, which is prepared in traditional recipes that balance spice, sourness, and umami. Festivals and weddings feature elaborate feasts, showcasing the culinary mastery passed down through generations."
+    },
+    {
+      id: "beaches",
+      title: "Beaches & Coastal Life",
+      description: "Andhra Pradesh’s coastline offers golden sands, azure waters, and vibrant local life.",
+      image: "/images/andhra-pradesh/beach.jpeg",
+      content: "Rishikonda, Bheemili, and Rushikonda beaches are not just scenic spots—they are hubs of coastal traditions, festivals, and livelihoods. Fishing villages, local markets, and water sports coexist with serene stretches of sand where sunrise and sunset paint the horizon. Seasonal festivals celebrate the sea, community, and the cultural rhythms of life along the Andhra coast, making the beaches a living part of the state’s identity."
+    }
+  ],
+  stories: [
+    {
+      id: "tirupati-lore",
+      title: "The Divine Legend of Tirupati",
+      excerpt: "How devotion, faith, and miracles shaped one of India’s holiest pilgrimage centers.",
+      content: "Legend narrates that Lord Venkateswara appeared on Tirumala hills to bless humanity. Over centuries, countless devotees have experienced miracles and divine guidance here. Pilgrimage involves not only spiritual connection but also community participation, as devotees contribute through seva, charitable acts, and festival preparations. Tirupati today is a vibrant tapestry of faith, culture, and enduring traditions.",
+      moral: "Faith nurtures community, devotion, and timeless traditions."
+    },
+    {
+      id: "kanaka-durga-vijayawada",
+      title: "Kanaka Durga of Vijayawada",
+      excerpt: "A goddess revered on Indrakeeladri hill, inspiring courage, protection, and cultural devotion.",
+      content: "The Kanaka Durga Temple, atop Indrakeeladri Hill overlooking the Krishna River, symbolizes divine courage. Annual festivals like Dasara draw pilgrims who witness rituals, processions, and devotional performances. The goddess’s presence has shaped the city’s identity for centuries, embedding courage, faith, and resilience into the local culture. Legends narrate her victory over demons, inspiring generations to embrace justice and valor.",
+      moral: "Courage and devotion guide communities through time."
+    },
+  ],
+  gallery: [
+    { src: "/images/andhra-pradesh/vijayawada.jpeg", alt: "Vijayawada Kanakadurga Temple" },
+
+    { src: "/images/andhra-pradesh/waterfalls.jpeg", alt: "Araku Waterfalls" }
+    //{ src: "/images/andhra-pradesh/andhra-thali.jpeg", alt: "Andhra Cuisine" }
+  ],
+  related: ["telangana", "tamil-nadu", "karnataka", "odisha"],
+},
+
   {
     slug: "arunachal-pradesh",
     name: "Arunachal Pradesh",
