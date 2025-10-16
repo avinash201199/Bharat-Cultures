@@ -8,7 +8,8 @@ type RequiredAspect = {
 }
 
 export function CultureGrid({ items, slug }: { items: CultureAspect[]; slug: string }) {
-  const required: RequiredAspect[] = [
+  // Canonical default structure
+  const defaultAspects: RequiredAspect[] = [
     { id: "festivals", title: "Festivals" },
     { id: "dance", title: "Dance & Devotion", aliases: ["music", "music-and-dance"] },
     { id: "cuisine", title: "Cuisine" },
@@ -16,23 +17,28 @@ export function CultureGrid({ items, slug }: { items: CultureAspect[]; slug: str
     { id: "rituals", title: "Rituals & Customs", aliases: ["ritual"] },
   ]
 
-  // Ensure consistent final shape for each canonical aspect.
-  const finalItems: CultureAspect[] = required.map((req) => {
-    const found = (items || []).find((a) => {
-      if (a.id === req.id) return true
-      if (req.aliases && req.aliases.includes(a.id)) return true
-      return false
-    })
+  let finalItems: CultureAspect[] = []
 
-    return {
+  if (items && items.length > 0) {
+    // 🟩 CASE 1: State has its own aspects — use them all dynamically
+    finalItems = items.map((a) => ({
+      id: a.id,
+      title: a.title || a.id.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+      description:
+        a.description || `Discover the significance of ${a.title?.toLowerCase() || a.id}.`,
+      image: a.image,
+      content: a.content,
+    }))
+  } else {
+    // 🟨 CASE 2: Fallback to canonical defaults if no custom data
+    finalItems = defaultAspects.map((req) => ({
       id: req.id,
-      // Force canonical display title so every state card looks consistent
       title: req.title,
-      description: found?.description ?? `Learn about ${req.title.toLowerCase()} in this state.`,
-      image: found?.image,
-      content: found?.content,
-    }
-  })
+      description: `Learn about ${req.title.toLowerCase()} in this state.`,
+      image: `/placeholder.svg?query=${encodeURIComponent(req.title)}`,
+      content: "",
+    }))
+  }
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
