@@ -1072,7 +1072,7 @@ const ALL: StateData[] = [
     ],
     related: ["assam", "mizoram", "meghalaya"],
   },
-  {
+  /*{
     slug: "uttar-pradesh",
     name: "Uttar Pradesh",
     tagline: "Kumbh spirit, sacred ghats, and the Taj",
@@ -1103,8 +1103,66 @@ const ALL: StateData[] = [
       { src: placeholder("Taj Mahal reflection pools", 800, 450), alt: "Taj Mahal" },
     ],
     related: ["uttarakhand", "delhi", "rajasthan", "madhya-pradesh", "bihar"],
-  },
+  },*/
   {
+  slug: "uttar-pradesh",
+  name: "Uttar Pradesh",
+  tagline: "Land of Taj Mahal, Ram Mandir, Varanasi ghats, and vibrant traditions",
+  heroImage: "/images/uttar-pradesh/home.jpeg",
+  about: "Uttar Pradesh is India’s cultural heartbeat, blending Mughal monuments, sacred temples, ghats of Varanasi, and festivals that resonate across centuries. From the Taj Mahal’s grandeur to life along the Ganges, every corner reflects devotion, artistry, and history.",
+  cultureAspects: [
+    {
+      id: "monuments",
+      title: "Monuments",
+      description: "From the Taj Mahal to Mughal forts, UP preserves timeless architectural marvels.",
+      image: "/images/uttar-pradesh/taj-mahal.jpeg",
+      content: "The Taj Mahal in Agra, a UNESCO World Heritage site, epitomizes Mughal architecture with its white marble domes and intricate inlay work. Forts like Agra Fort and Fatehpur Sikri showcase royal history, artistry, and grandeur. These monuments draw millions of tourists and serve as symbols of India’s rich historical legacy."
+    },
+    {
+      id: "temples",
+      title: "Temples & Pilgrimage",
+      description: "Sacred sites like Ram Mandir in Ayodhya and Kashi Vishwanath in Varanasi inspire devotion across India.",
+      image: "/images/uttar-pradesh/ram.jpeg",
+      content: "Ayodhya, believed to be Lord Rama’s birthplace, has been a center of devotion for millennia. The Ram Mandir now stands as a spiritual landmark, attracting devotees globally. Varanasi, one of the world’s oldest living cities, thrives along the Ganges with rituals, ghats, and daily ceremonies that echo spirituality and continuity of faith."
+    },
+    {
+      id: "varanasi-ghats",
+      title: "Varanasi & Ganga Ghats",
+      description: "Life along the Ganges from birth rituals to last rites reveals a city steeped in spirituality.",
+      image: "/images/uttar-pradesh/varanasi.jpeg",
+      content: "Varanasi, the oldest living city in India, is a cultural and spiritual hub. The ghats along the Ganga witness every stage of life—baptisms, daily prayers, meditation, festivals, and cremations. The continuous cycle of life, death, and devotion creates a unique living heritage, embodying centuries of rituals, music, and storytelling."
+    },
+    {
+      id: "cuisine",
+      title: "Cuisine & Delicacies",
+      description: "Mughlai flavors, kebabs, and sweets like petha and gujiyas define UP’s culinary heritage.",
+      image: "/images/uttar-pradesh/food.jpeg",
+      content: "Lucknow’s kebabs, biryani, and Mughlai curries reflect royal culinary traditions. Mathura’s petha, Banarasi sweets, and street food along ghats capture local flavors. Festivals and weddings feature elaborate spreads, highlighting the diversity and richness of UP cuisine."
+    }
+  ],
+  stories: [
+    {
+      id: "taj-mahal-legend",
+      title: "The Eternal Love of Taj Mahal",
+      excerpt: "Shah Jahan’s tribute to Mumtaz Mahal immortalized in marble.",
+      content: "Built in the 17th century, the Taj Mahal is not only an architectural masterpiece but also a symbol of eternal love. Its gardens, reflecting pools, and intricate carvings narrate a story of devotion and artistry, drawing millions of visitors each year.",
+      moral: "Love and dedication can leave timeless legacies."
+    },
+    {
+      id: "ram-mandir-ayat",
+      title: "The Spiritual Heart of Ayodhya",
+      excerpt: "Ayodhya, the birthplace of Lord Rama, inspires devotion and pilgrimage.",
+      content: "The Ram Mandir stands as a symbol of faith and resilience. Devotees flock to witness rituals, festivals, and ceremonies that have been preserved for generations. Pilgrimage here intertwines spirituality with cultural celebration.",
+      moral: "Faith sustains communities through centuries."
+    },
+  ],
+  gallery: [
+
+    { src: "/images/uttar-pradesh/holi.jpeg", alt: "Holi in Mathura" }
+  ],
+  related: ["rajasthan", "uttarakhand", "bihar", "madhya-pradesh"]
+},
+{
     slug: "uttarakhand",
     name: "Uttarakhand",
     tagline: "Himalayan shrines, Ganga source, and folk songs",
