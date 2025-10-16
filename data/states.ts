@@ -9,7 +9,7 @@ const ALL: StateData[] = [
     slug: "kerala",
     name: "Kerala",
     tagline: "God’s Own Country",
-    heroImage: placeholder("Kerala backwaters and Kathakali"),
+    heroImage: "/images/kerala/home.jpeg",
     about:
       "Kerala blends lush backwaters, Ayurveda, and classical arts like Kathakali and Mohiniyattam. Its culture values harmony, education, and communal festivals like Onam.",
     cultureAspects: [
@@ -92,7 +92,7 @@ const ALL: StateData[] = [
     slug: "maharashtra",
     name: "Maharashtra",
     tagline: "Gateway of India, Traditions of Warkari",
-    heroImage: placeholder("Maharashtra Gateway of India and Warli art"),
+    heroImage:"/images/maharashtra/home.jpeg",
     about:
       "From Mumbai’s cosmopolitan energy to Warli art and Warkari devotion, Maharashtra balances modernity and tradition.",
     cultureAspects: [
@@ -162,7 +162,7 @@ const ALL: StateData[] = [
     slug: "rajasthan",
     name: "Rajasthan",
     tagline: "Desert Palaces and Folk Splendor",
-    heroImage: placeholder("Rajasthan forts deserts and kalbeliya dance"),
+    heroImage: "/images/rajasthan/home.jpeg",
     about: "Rajasthan’s forts, miniature paintings, and folk music echo tales of resilience and hospitality.",
     cultureAspects: [
       {
@@ -230,7 +230,7 @@ const ALL: StateData[] = [
     slug: "tamil-nadu",
     name: "Tamil Nadu",
     tagline: "Classical Temples and Bharatanatyam",
-    heroImage: placeholder("Tamil Nadu temples and Bharatanatyam"),
+    heroImage: "/images/tamil-nadu/home.jpeg",
     about:
       "Rooted in Sangam literature, Carnatic music, and Dravidian architecture, Tamil Nadu honors continuity and learning.",
     cultureAspects: [
@@ -263,7 +263,7 @@ const ALL: StateData[] = [
     slug: "delhi",
     name: "Delhi (NCT)",
     tagline: "Where Many Histories Meet",
-    heroImage: placeholder("Delhi Qutub Minar and Red Fort"),
+    heroImage:"/images/delhi/home.jpeg",
     about: "A confluence of dynasties and diversity, Delhi reflects India’s plural ethos.",
     cultureAspects: [
       {
@@ -297,7 +297,7 @@ const ALL: StateData[] = [
     slug: "andhra-pradesh",
     name: "Andhra Pradesh",
     tagline: "Kuchipudi, temple towns, and coastal flavors",
-    heroImage: placeholder("Andhra Pradesh art cuisine"),
+    heroImage: "/images/andhra-pradesh/home.jpeg",
     about: "From Tirupati’s devotion to coastal flavors and Kuchipudi dance, Andhra blends faith, art, and enterprise.",
     cultureAspects: [
       {
@@ -329,7 +329,7 @@ const ALL: StateData[] = [
     slug: "arunachal-pradesh",
     name: "Arunachal Pradesh",
     tagline: "Dawn-lit mountains, monasteries, and vibrant festivals",
-    heroImage: placeholder("Arunachal mountains festivals"),
+    heroImage: "/images/arunachal-pradesh/home.jpg",
     about: "Land of the dawn-lit mountains with diverse tribes, monasteries, and rich textile and bamboo craft.",
     cultureAspects: [
       {
@@ -361,7 +361,7 @@ const ALL: StateData[] = [
     slug: "assam",
     name: "Assam",
     tagline: "Tea gardens, Brahmaputra, and Bihu rhythms",
-    heroImage: placeholder("Assam tea and Bihu"),
+    heroImage: "/images/assam/home.jpeg",
     about: "Assam’s tea gardens, Bihu dance, and mighty Brahmaputra shape a culture of warmth and resilience.",
     cultureAspects: [
       {
@@ -393,7 +393,7 @@ const ALL: StateData[] = [
     slug: "bihar",
     name: "Bihar",
     tagline: "Nalanda legacy, Madhubani art, and sacred traditions",
-    heroImage: placeholder("Bihar Madhubani art"),
+    heroImage: "/images/bihar/home.jpeg",
     about: "Home to ancient universities and living arts, Bihar bridges scholarship, devotion, and folk creativity.",
     cultureAspects: [
       {
@@ -425,7 +425,7 @@ const ALL: StateData[] = [
     slug: "chhattisgarh",
     name: "Chhattisgarh",
     tagline: "Tribal dance, forests, and folk craftsmanship",
-    heroImage: placeholder("Chhattisgarh tribal dance"),
+    heroImage: "/images/chhattisgarh/home.jpeg",
     about: "Lush forests, indigenous dances, and bell metal craft define Chhattisgarh’s living heritage.",
     cultureAspects: [
       {
@@ -457,7 +457,7 @@ const ALL: StateData[] = [
     slug: "goa",
     name: "Goa",
     tagline: "Beaches, churches, and carnival spirit",
-    heroImage: placeholder("Goa beaches and carnival"),
+    heroImage: "/images/goa/home.jpeg",
     about: "Coastal cuisine, Latin-Indian heritage, and easygoing susegad ethos shape Goa’s vibrant culture.",
     cultureAspects: [
       {
@@ -489,7 +489,7 @@ const ALL: StateData[] = [
     slug: "gujarat",
     name: "Gujarat",
     tagline: "Garba, stepwells, and the crafts of Kutch",
-    heroImage: placeholder("Gujarat garba and stepwells"),
+    heroImage: "/images/gujarat/home.jpeg",
     about: "From stepwells to salt deserts, Gujarat dances to Garba and thrives on enterprise and craft.",
     cultureAspects: [
       {
@@ -521,7 +521,7 @@ const ALL: StateData[] = [
     slug: "haryana",
     name: "Haryana",
     tagline: "Golden fields, akharas, and folk songs",
-    heroImage: placeholder("Haryana folk and fields"),
+    heroImage: "/images/haryana/home.jpeg",
     about: "Farming traditions, akharas, and soulful ragni singing shape Haryana’s sturdy spirit.",
     cultureAspects: [
       {
@@ -553,7 +553,7 @@ const ALL: StateData[] = [
     slug: "himachal-pradesh",
     name: "Himachal Pradesh",
     tagline: "Himalayan temples, apple orchards, and mountain dhams",
-    heroImage: placeholder("Himachal hills temples"),
+    heroImage: "/images/himachal-pradesh/home.jpeg",
     about: "Snow-capped shrines, wooden homes, and festival processions define Himachal’s mountain charm.",
     cultureAspects: [
       {
@@ -585,7 +585,7 @@ const ALL: StateData[] = [
     slug: "jharkhand",
     name: "Jharkhand",
     tagline: "Forests, waterfalls, and indigenous heritage",
-    heroImage: placeholder("Jharkhand forests folk"),
+    heroImage: "/images/jharkhand/home.jpeg",
     about: "Rich in forests and minerals, Jharkhand’s dances and crafts celebrate nature and resilience.",
     cultureAspects: [
       {
@@ -617,7 +617,7 @@ const ALL: StateData[] = [
     slug: "karnataka",
     name: "Karnataka",
     tagline: "Hampi ruins, Yakshagana, and filter coffee",
-    heroImage: placeholder("Karnataka Hampi and Yakshagana"),
+    heroImage: "/images/karnataka/home.jpeg",
     about: "From Hampi’s stones to Bengaluru’s buzz, Karnataka blends heritage with innovation.",
     cultureAspects: [
       {
@@ -649,7 +649,7 @@ const ALL: StateData[] = [
     slug: "madhya-pradesh",
     name: "Madhya Pradesh",
     tagline: "Heart of India: temples, wildlife, and ghats",
-    heroImage: placeholder("Madhya Pradesh temples wildlife"),
+    heroImage: "/images/madhya-pradesh/home.jpeg",
     about: "The heart of India holds rock art, temple towns, and forests rich with wildlife.",
     cultureAspects: [
       {
@@ -681,7 +681,7 @@ const ALL: StateData[] = [
     slug: "manipur",
     name: "Manipur",
     tagline: "Ras Lila grace, polo origins, and serene lakes",
-    heroImage: placeholder("Manipur Ras Lila and polo"),
+    heroImage: "/images/manipur/home.jpeg",
     about: "Graceful Ras Lila, handloom traditions, and Loktak’s floating phumdis define Manipur’s beauty.",
     cultureAspects: [
       {
@@ -713,7 +713,7 @@ const ALL: StateData[] = [
     slug: "meghalaya",
     name: "Meghalaya",
     tagline: "Living root bridges, misty hills, and Khasi culture",
-    heroImage: placeholder("Meghalaya living root bridges"),
+    heroImage: "/images/meghalaya/home.jpeg",
     about: "Cloud-kissed hills, matrilineal traditions, and living root bridges mark Meghalaya’s harmony with nature.",
     cultureAspects: [
       {
@@ -745,7 +745,7 @@ const ALL: StateData[] = [
     slug: "mizoram",
     name: "Mizoram",
     tagline: "Zoram hills, handlooms, and bamboo craft",
-    heroImage: placeholder("Mizoram hills and handlooms"),
+    heroImage: "/images/mizoram/home.jpeg",
     about: "Rolling hills, chhangban handlooms, and community festivals shape Mizoram’s close-knit culture.",
     cultureAspects: [
       {
@@ -777,7 +777,7 @@ const ALL: StateData[] = [
     slug: "nagaland",
     name: "Nagaland",
     tagline: "Hornbill festival, hills, and warrior traditions",
-    heroImage: placeholder("Nagaland Hornbill festival"),
+    heroImage: "/images/nagaland/home.jpeg",
     about: "Distinct tribes, crafts, and choral music come together at festivals like Hornbill.",
     cultureAspects: [
       {
@@ -809,7 +809,7 @@ const ALL: StateData[] = [
     slug: "odisha",
     name: "Odisha",
     tagline: "Jagannath culture, Odissi dance, and temple arts",
-    heroImage: placeholder("Odisha Jagannath and dance"),
+    heroImage: "/images/odisha/home.jpeg",
     about: "Jagannath devotion, Odissi dance, and temple sculpture define Odisha’s classical heart.",
     cultureAspects: [
       {
@@ -841,7 +841,7 @@ const ALL: StateData[] = [
     slug: "punjab",
     name: "Punjab",
     tagline: "Five rivers, Bhangra beats, and langar spirit",
-    heroImage: placeholder("Punjab fields and Bhangra"),
+    heroImage: "/images/punjab/home.jpeg",
     about: "Farming pride, Gurdwaras’ langar, and Bhangra’s energy underscore Punjab’s generosity.",
     cultureAspects: [
       {
@@ -873,7 +873,7 @@ const ALL: StateData[] = [
     slug: "sikkim",
     name: "Sikkim",
     tagline: "Monasteries, snow peaks, and organic harmony",
-    heroImage: placeholder("Sikkim monasteries and peaks"),
+    heroImage: "/images/sikkim/home.jpeg",
     about: "Organic farms, Buddhist monasteries, and mountain passes make Sikkim serene and sustainable.",
     cultureAspects: [
       {
@@ -905,31 +905,77 @@ const ALL: StateData[] = [
     slug: "telangana",
     name: "Telangana",
     tagline: "Charminar charm, Deccani flavors, and Bonalu",
-    heroImage: placeholder("Telangana Charminar Bonalu"),
+    heroImage: "/images/telangana/hero.jpeg",
     about: "Hyderabad’s pearls, Deccani cuisine, and Bonalu festivities reflect Telangana’s rich fusion.",
     cultureAspects: [
       {
-        id: "festivals",
-        title: "Festivals",
-        description: "Bonalu and Bathukamma celebrate goddess worship and community.",
-        image: placeholder("Telangana Bonalu procession"),
-      },
-      {
-        id: "heritage",
-        title: "Heritage",
-        description: "Charminar and Golconda narrate a storied Deccan past.",
-        image: placeholder("Telangana Charminar close-up"),
-      },
-      {
-        id: "cuisine",
-        title: "Cuisine",
-        description: "Hyderabadi biryani, haleem, and Qubani ka Meetha are beloved classics.",
-        image: placeholder("Hyderabadi biryani pot"),
-      },
+      id: "charminar",
+      title: "Charminar – Symbol of Hyderabad",
+      description:
+        "Built in 1591, the Charminar stands as a symbol of Hyderabad’s glorious past under the Qutb Shahi dynasty. Its Indo-Islamic architecture, intricate stucco work, and bustling bazaars around it, like Laad Bazaar, reflect the city’s old-world charm and cultural richness.",
+      image: "/images/telangana/charminar.jpeg",
+      content:
+        "Charminar, located in the heart of Hyderabad, was built by Sultan Muhammad Quli Qutb Shah. It represents the founding of the city and the end of a deadly plague. Surrounding it are aromatic food stalls, pearl shops, and artisans preserving centuries-old crafts.",
+    },
+    {
+      id: "bonalu",
+      title: "Bonalu – Festival of Strength and Faith",
+      description:
+        "Bonalu, celebrated with grandeur across Telangana, honors Goddess Mahakali. Women carry decorated pots filled with offerings, while men perform Pothuraju dances, symbolizing protection and devotion.",
+      image: "/images/telangana/bonalu.jpeg",
+      content:
+        "Originating in Hyderabad and Secunderabad, Bonalu reflects Telangana’s matriarchal spiritual traditions. Every July–August, the streets come alive with rhythmic drums, chants, and community feasts as devotees thank the Goddess for prosperity and protection.",
+    },
+    {
+      id: "bathukamma",
+      title: "Bathukamma – Celebration of Flowers and Womanhood",
+      description:
+        "Bathukamma is Telangana’s floral festival symbolizing the strength, spirit, and grace of women. It features colorful flower stacks arranged in concentric layers and celebrated with songs and dance.",
+      image: "/images/telangana/bathukamma.jpeg",
+      content:
+        "Bathukamma, celebrated during Navratri, showcases seasonal flowers like Gunuka and Tangedu. Women gather in vibrant attire, form circles around the flower stacks, and sing folk songs that celebrate life and nature.",
+    },
+    {
+      id: "cuisine",
+      title: "Delectable Biryani & Haleem",
+      description:
+        "Telangana cuisine is a royal fusion of spicy local flavors and Nizami delicacies. Hyderabad’s Biryani and Ramadan-special Haleem represent the culinary legacy that connects tradition with taste.",
+      image: "/images/telangana/biryani.jpeg",
+      content:
+        "Hyderabadi Biryani, cooked with basmati rice, saffron, and marinated meat, embodies centuries of Mughlai and Telugu influence. During Ramadan, Haleem — a slow-cooked wheat and meat delicacy — unites communities in celebration and flavor.",
+    },
+    {
+      id: "it-sector",
+      title: "Hyderabad’s IT Hub – The Modern Face of Telangana",
+      description:
+        "Hyderabad, home to HITEC City and global tech giants, showcases Telangana’s transformation into a digital powerhouse while maintaining its cultural soul.",
+      image: "/images/telangana/hitec-city.jpeg",
+      content:
+        "Known as ‘Cyberabad’, Hyderabad houses companies like Microsoft, Google, and Amazon. Its futuristic skyline, innovation ecosystem, and world-class infrastructure coexist with centuries-old monuments — a true reflection of Telangana’s dual identity.",
+    },
     ],
+    stories: [
+    {
+      id: "bathukamma-blessing",
+      title: "The Bathukamma Blessing",
+      excerpt: "A girl’s floral devotion restores her village’s prosperity.",
+      content:
+        "Long ago, in a drought-stricken village near Siddipet, people despaired as their lakes dried and crops failed. Amidst this struggle, a little girl named Mallamma gathered wild flowers from the parched fields and arranged them in layers, forming a vibrant tower. She placed it before the village temple, whispering prayers for life to return. Seeing her innocence, the villagers joined her, each bringing flowers, singing songs to the Mother Goddess.\n\nAs dusk fell, clouds gathered. A gentle rain began, soaking the earth with renewal. The fields turned green again, and the lakes filled with life. The people named the celebration ‘Bathukamma’ — meaning ‘Mother, come alive.’ To this day, Telangana women gather in colorful sarees, sing folk songs, and offer floral devotion, remembering Mallamma’s prayer that brought hope.",
+      moral: "Faith and gratitude invite abundance.",
+    },
+    {
+      id: "kakatiya-rudramadevi",
+      title: "Rudramadevi — The Kakatiya Queen",
+      excerpt:
+        "A fearless queen who led with wisdom, valor, and equality in an age of kings.",
+      content:
+        "In the heart of the Deccan plateau rose the magnificent Kakatiya Empire, ruled by a name that would echo through centuries — Rani Rudramadevi. Born to King Ganapati Deva, she was trained in the art of war, diplomacy, and justice. To ensure she was accepted in a male-dominated court, she was raised as a prince — Rudradeva.\n\nWhen she ascended the throne, nobles doubted her, but the queen proved her strength through action, not words. She restructured the army, built reservoirs for farmers, and fortified Warangal with impregnable stone walls and grand gateways. Under her rule, trade flourished, and art and architecture reached their golden age.\n\nDuring invasions, Rudramadevi herself rode at the frontlines in armor, inspiring her soldiers with unmatched courage. Even her enemies bowed to her valor. Her reign was a beacon of gender equality and administrative brilliance — a time when Telangana’s spirit of resilience and pride took form in the mighty Kakatiya fortresses that still stand today.",
+      moral: "True leadership transcends gender—it lies in courage, compassion, and vision.",
+    },
+  ],
     gallery: [
-      { src: placeholder("Golconda fort views", 800, 450), alt: "Golconda" },
-      { src: placeholder("Bathukamma floral stacks", 800, 450), alt: "Bathukamma" },
+      { src:"/images/telangana/golkonda.jpeg", alt: "Golconda" },
+      { src: "/images/telangana/thousand-pillars.jpeg", alt: "Warangal" },
     ],
     related: ["andhra-pradesh", "karnataka", "maharashtra"],
   },
@@ -937,7 +983,7 @@ const ALL: StateData[] = [
     slug: "tripura",
     name: "Tripura",
     tagline: "Royal palaces, bamboo crafts, and folk tales",
-    heroImage: placeholder("Tripura palaces and bamboo craft"),
+    heroImage: "/images/tripura/home.jpeg",
     about: "Ujjayanta Palace, bamboo crafts, and diverse tribes make Tripura quietly captivating.",
     cultureAspects: [
       {
@@ -969,7 +1015,7 @@ const ALL: StateData[] = [
     slug: "uttar-pradesh",
     name: "Uttar Pradesh",
     tagline: "Kumbh spirit, sacred ghats, and the Taj",
-    heroImage: placeholder("UP Kumbh and Taj"),
+    heroImage: "/images/uttar-pradesh/home.jpeg",
     about: "From Varanasi’s ghats to Agra’s Taj, UP anchors sacred journeys and Mughal heritage.",
     cultureAspects: [
       {
@@ -1001,7 +1047,7 @@ const ALL: StateData[] = [
     slug: "uttarakhand",
     name: "Uttarakhand",
     tagline: "Himalayan shrines, Ganga source, and folk songs",
-    heroImage: placeholder("Uttarakhand Himalayas and Ganga"),
+    heroImage: "/images/uttarakhand/home.jpeg",
     about: "Devbhumi’s pilgrim routes, folk songs, and alpine meadows inspire devotion and adventure.",
     cultureAspects: [
       {
@@ -1033,7 +1079,7 @@ const ALL: StateData[] = [
     slug: "west-bengal",
     name: "West Bengal",
     tagline: "Durga Puja, adda, and the arts of Bengal",
-    heroImage: placeholder("Bengal Durga Puja and art"),
+    heroImage: "/images/west-bengal/home.jpeg",
     about: "Poetry, theatre, and Durga Puja processions animate Bengal’s artistic and intellectual life.",
     cultureAspects: [
       {
@@ -1067,7 +1113,7 @@ const ALL: StateData[] = [
     slug: "andaman-and-nicobar-islands",
     name: "Andaman & Nicobar Islands",
     tagline: "Coral shores, island tribes, and turquoise lagoons",
-    heroImage: placeholder("Andaman Nicobar beaches tribes"),
+    heroImage: "/images/andaman-and-nicobar-islands/home.jpeg",
     about: "Pristine reefs, layered histories, and island communities define Andaman’s maritime character.",
     cultureAspects: [
       {
@@ -1099,7 +1145,7 @@ const ALL: StateData[] = [
     slug: "chandigarh",
     name: "Chandigarh",
     tagline: "Modernist city, gardens, and boulevards",
-    heroImage: placeholder("Chandigarh architecture gardens"),
+    heroImage: "/images/chandigarh/home.jpeg",
     about: "Planned modernism, gardens, and shared Punjab-Haryana culture give Chandigarh a unique identity.",
     cultureAspects: [
       {
@@ -1131,7 +1177,7 @@ const ALL: StateData[] = [
     slug: "dadra-and-nagar-haveli-and-daman-and-diu",
     name: "Dadra & Nagar Haveli and Daman & Diu",
     tagline: "Coastal forts, fusion cultures, and seafaring past",
-    heroImage: placeholder("Daman Diu coastal forts"),
+    heroImage: "/images/dadra-and-nagar-haveli-and-daman-and-diu/home.jpeg",
     about: "Portuguese-era forts, beaches, and tribal crafts shape these linked coastal and inland regions.",
     cultureAspects: [
       {
@@ -1163,7 +1209,7 @@ const ALL: StateData[] = [
     slug: "jammu-and-kashmir",
     name: "Jammu & Kashmir",
     tagline: "Valleys, houseboats, pashmina, and saffron",
-    heroImage: placeholder("Kashmir valleys and crafts"),
+    heroImage: "/images/jammu-and-kashmir/home.jpeg",
     about: "Sufi poetry, wazwan cuisine, and alpine vistas make the valley unforgettable.",
     cultureAspects: [
       {
@@ -1195,7 +1241,7 @@ const ALL: StateData[] = [
     slug: "ladakh",
     name: "Ladakh",
     tagline: "High passes, monasteries, and starlit skies",
-    heroImage: placeholder("Ladakh monasteries and passes"),
+    heroImage: "/images/ladakh/home.jpeg",
     about: "High-altitude deserts, Tibetan Buddhist monasteries, and resilient villages define Ladakh.",
     cultureAspects: [
       {
@@ -1227,7 +1273,7 @@ const ALL: StateData[] = [
     slug: "lakshadweep",
     name: "Lakshadweep",
     tagline: "Coral atolls, lagoons, and quiet rhythms",
-    heroImage: placeholder("Lakshadweep corals and lagoons"),
+    heroImage: "/images/lakshadweep/home.jpeg",
     about: "Tiny atolls, coconut groves, and tranquil lagoons create a delicate island culture.",
     cultureAspects: [
       {
@@ -1259,7 +1305,7 @@ const ALL: StateData[] = [
     slug: "pondicherry",
     name: "Puducherry",
     tagline: "French quarter charm, ashram calm, and beaches",
-    heroImage: placeholder("Puducherry French quarter and beaches"),
+    heroImage: "/images/pondicherry/home.jpeg",
     about: "Auroville ideals, French heritage streets, and Tamil culture blend along calm shores.",
     cultureAspects: [
       {
