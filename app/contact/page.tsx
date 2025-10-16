@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
+import { toast, Toaster } from "sonner" // make sure: npm i sonner
 
 export default function ContactPage() {
   const [name, setName] = useState("")
@@ -12,17 +13,14 @@ export default function ContactPage() {
     const newErrors: typeof errors = {}
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    // ✅ Name validation
     if (!name.trim()) newErrors.name = "Name is required"
-    else if (name.trim().length < 3) newErrors.name = "Name must be at least 3 characters long"
+    else if (name.trim().length < 3) newErrors.name = "Name must be at least 3 characters"
 
-    // ✅ Email validation
     if (!email.trim()) newErrors.email = "Email is required"
     else if (!emailRegex.test(email)) newErrors.email = "Invalid email format"
 
-    // ✅ Message validation
     if (!msg.trim()) newErrors.msg = "Message cannot be empty"
-    else if (msg.length < 10) newErrors.msg = "Message must be at least 10 characters"
+    else if (msg.trim().length < 10) newErrors.msg = "Message must be at least 10 characters"
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -30,7 +28,14 @@ export default function ContactPage() {
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!validate()) return
+
+    if (!validate()) {
+      const messages = Object.values(errors).filter(Boolean).join("\n• ")
+      toast.error(`❌ Please fix the following errors:\n• ${messages}`, {
+        style: { backgroundColor: "#fee2e2", color: "#b91c1c" },
+      })
+      return
+    }
 
     try {
       const res = await fetch("/api/contact", {
@@ -39,24 +44,29 @@ export default function ContactPage() {
         body: JSON.stringify({ name, email, msg }),
       })
 
+      const data = await res.json()
+
       if (res.ok) {
-        alert("✅ Message sent successfully!")
+        toast.success(data.message || "✅ Your message has been sent!")
         setName("")
         setEmail("")
         setMsg("")
         setErrors({})
       } else {
-        alert("❌ Failed to send message. Please try again.")
+        toast.error(data.error || "❌ Failed to send message. Please try again.")
       }
     } catch (error) {
-      alert("⚠️ Error sending message. Check your internet or try later.")
+      toast.error("⚠️ Error sending message. Check your internet or try later.")
     }
   }
 
   return (
     <div className="mx-auto max-w-xl px-4 py-8">
+      <Toaster /> {/* Required for toast notifications */}
       <h1 className="text-2xl font-semibold">Contact</h1>
-      <p className="mt-2 text-muted-foreground">Have feedback or ideas? We’d love to hear from you.</p>
+      <p className="mt-2 text-muted-foreground">
+        Have feedback or ideas? We’d love to hear from you.
+      </p>
 
       <form className="mt-6 space-y-3" onSubmit={onSubmit}>
         {/* Name */}
@@ -70,7 +80,6 @@ export default function ContactPage() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
         </div>
 
         {/* Email */}
@@ -85,7 +94,6 @@ export default function ContactPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
 
         {/* Message */}
@@ -100,9 +108,9 @@ export default function ContactPage() {
             value={msg}
             onChange={(e) => setMsg(e.target.value)}
           />
-          {errors.msg && <p className="text-red-500 text-xs mt-1">{errors.msg}</p>}
         </div>
 
+        {/* Submit */}
         <button
           type="submit"
           className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90"
