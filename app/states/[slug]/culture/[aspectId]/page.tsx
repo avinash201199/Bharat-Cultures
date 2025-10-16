@@ -3,6 +3,7 @@ import Link from "next/link"
 import { getStateBySlug } from "@/data/states"
 import type { CultureAspect } from "@/data/types"
 
+// ✅ Utility function to build fallback descriptive text
 function buildFallbackContent(sName: string, aspect: CultureAspect, about?: string) {
   return [
     `${aspect.title} of ${sName}`,
@@ -13,33 +14,37 @@ function buildFallbackContent(sName: string, aspect: CultureAspect, about?: stri
   ].join("\n\n")
 }
 
+// ✅ FIX: await params for Next.js 13/14 dynamic routes
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string; aspectId: string }
+  params: Promise<{ slug: string; aspectId: string }>
 }) {
-  const s = getStateBySlug(params.slug)
-  const aspect = s?.cultureAspects?.find((a) => a.id === params.aspectId)
-  // allow certain predefined aspect ids to have fallback pages
+  const { slug, aspectId } = await params
+
+  const s = getStateBySlug(slug)
+  const aspect = s?.cultureAspects?.find((a) => a.id === aspectId)
+
+  // Allowed fallback aspect IDs
   const allowed = ["festivals", "dance", "cuisine", "art", "rituals"]
 
   if (!s) return {}
 
   const fallback =
-    allowed.includes(params.aspectId) &&
-    ( {
-      id: params.aspectId,
+    allowed.includes(aspectId) &&
+    ({
+      id: aspectId,
       title:
-        params.aspectId === "dance"
+        aspectId === "dance"
           ? "Dance & Devotion"
-          : params.aspectId === "art"
+          : aspectId === "art"
           ? "Art & Handicrafts"
-          : params.aspectId === "rituals"
+          : aspectId === "rituals"
           ? "Rituals & Customs"
-          : params.aspectId === "cuisine"
+          : aspectId === "cuisine"
           ? "Cuisine"
           : "Festivals",
-      description: `Learn about ${params.aspectId.replace(/-/g, " ")} in ${s.name}.`,
+      description: `Learn about ${aspectId.replace(/-/g, " ")} in ${s.name}.`,
       image: undefined,
       content: undefined,
     } as CultureAspect)
@@ -56,30 +61,31 @@ export async function generateMetadata({
 export default async function StateCultureAspectPage({
   params,
 }: {
-  params: { slug: string; aspectId: string }
+  params: Promise<{ slug: string; aspectId: string }>
 }) {
-  const s = getStateBySlug(params.slug)
-  const aspect = s?.cultureAspects?.find((a) => a.id === params.aspectId)
+  const { slug, aspectId } = await params
+  const s = getStateBySlug(slug)
+  const aspect = s?.cultureAspects?.find((a) => a.id === aspectId)
   const allowed = ["festivals", "dance", "cuisine", "art", "rituals"]
 
   if (!s) return notFound()
 
   const resolvedAspect =
     aspect ||
-    (allowed.includes(params.aspectId)
+    (allowed.includes(aspectId)
       ? ({
-          id: params.aspectId,
+          id: aspectId,
           title:
-            params.aspectId === "dance"
+            aspectId === "dance"
               ? "Dance & Devotion"
-              : params.aspectId === "art"
+              : aspectId === "art"
               ? "Art & Handicrafts"
-              : params.aspectId === "rituals"
+              : aspectId === "rituals"
               ? "Rituals & Customs"
-              : params.aspectId === "cuisine"
+              : aspectId === "cuisine"
               ? "Cuisine"
               : "Festivals",
-          description: `Learn about ${params.aspectId.replace(/-/g, " ")} in ${s.name}.`,
+          description: `Learn about ${aspectId.replace(/-/g, " ")} in ${s.name}.`,
           image: undefined,
           content: undefined,
         } as CultureAspect)
@@ -87,7 +93,7 @@ export default async function StateCultureAspectPage({
 
   if (!resolvedAspect) return notFound()
 
-  // Ensure there's always an image shown on the detail page.
+  // ✅ Always show some image (fallback to heroImage or placeholder)
   const image = resolvedAspect.image ?? s.heroImage ?? `/placeholder.svg?query=${encodeURIComponent(
     `${resolvedAspect.title} ${s.name}`
   )}`
