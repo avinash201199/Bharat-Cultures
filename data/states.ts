@@ -25,6 +25,17 @@ const ALL: StateData[] = [
           "with Vishukkani—auspicious first sight of the day—symbolizing abundance and hope.",
       },
       {
+        id: "festivals",
+        title: "Festivals",
+        description:
+          "Onam and Vishu celebrate harvest and renewal with floral carpets (Pookalam), boat races, and feasts (Sadya).",
+        image: placeholder("Kerala Onam Pookalam"),
+        content:
+          "Onam marks the legendary return of King Mahabali and the joy of harvest. Homes craft intricate Pookalams,\n" +
+          "villages host Vallamkali (snake boat races), and families share Sadya on banana leaves. Vishu ushers in the new year\n" +
+          "with Vishukkani—auspicious first sight of the day—symbolizing abundance and hope.",
+      },
+      {
         id: "dance",
         title: "Music & Dance",
         description: "Kathakali, Mohiniyattam, and Sopana Sangeetham exemplify expressive storytelling and rhythm.",
@@ -453,6 +464,39 @@ const ALL: StateData[] = [
     ],
     related: ["madhya-pradesh", "odisha", "jharkhand", "maharashtra"],
   },
+  {
+  slug: "jharkhand",
+  name: "Jharkhand",
+  tagline: "Tribal rhythms, forest lore, and sacred stone traditions",
+  heroImage: placeholder("Jharkhand tribal dance in forest setting"),
+  about: "Jharkhand pulses with indigenous heritage, sacred landscapes, and vibrant folk expressions rooted in nature.",
+  cultureAspects: [
+    {
+      id: "dance",
+      title: "Dance & Devotion",
+      description: "Paika and Chhau dances blend martial energy with storytelling and ritual.",
+      image: placeholder("Jharkhand Chhau dance performance"),
+    },
+    {
+      id: "rituals",
+      title: "Rituals & Customs",
+      description: "Sarna worship honors nature spirits through sacred groves and seasonal rites.",
+      image: placeholder("Sarna grove ritual Jharkhand"),
+    },
+    {
+      id: "cuisine",
+      title: "Cuisine",
+      description: "Dishes like dhuska and handia reflect forest produce and community feasting.",
+      image: placeholder("Jharkhand dhuska and handia"),
+    },
+  ],
+  gallery: [
+    { src: placeholder("Tribal mural art on village wall", 800, 450), alt: "Tribal mural" },
+    { src: placeholder("Chhau dancer mid-leap", 800, 450), alt: "Chhau dance" },
+  ],
+  related: ["bihar", "odisha", "chhattisgarh"],
+  },
+
   {
     slug: "goa",
     name: "Goa",
